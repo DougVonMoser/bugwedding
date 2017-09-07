@@ -1,0 +1,80 @@
+$break1: 			504px;
+$break2: 			1024px;
+$break3: 			1170px;
+
+@mixin desktop {
+  @media all and (min-width: #{$break2}) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media all and (min-width: #{$break1}) {
+    @content;
+  }
+}
+
+body {
+  margin: 0;
+  background-color: ivory;
+}
+
+header {
+  background-color: purple;
+  height: 8%;
+
+  span {
+    display:block;
+    font-size: 100%;
+    text-align: center;
+  }
+}
+
+.thing-wrapper {
+  //background-color: white;
+  padding-top: 30px;
+}
+
+.left-thing {
+  //background-color: green;
+  @include tablet {
+    width: 25%;
+    float:left;
+
+  }
+
+}
+.right-thing {
+  //background-color: blue;
+  @include tablet {
+    width: 75%;
+    margin-left: 25%;
+  }
+}
+
+h1 {
+  color: blue;
+  @include tablet {
+    color:red;
+  }
+  @include desktop {
+    color: black;
+  }
+}
+
+
+img {
+  border: purple solid 25px;
+  border-radius: 10px;
+  display: block;
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  @include tablet {
+    width: 60%;
+  }
+  @include desktop {
+      width: 50%;
+  }
+}
+
+
