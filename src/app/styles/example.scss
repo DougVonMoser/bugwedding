@@ -2,15 +2,20 @@ $break1: 			504px;
 $break2: 			1024px;
 $break3: 			1170px;
 
+@mixin tablet {
+  @media all and (min-width: #{$break1}) {
+    @content;
+  }
+}
 @mixin desktop {
   @media all and (min-width: #{$break2}) {
     @content;
   }
 }
-@mixin tablet {
-  @media all and (min-width: #{$break1}) {
-    @content;
-  }
+
+* {
+  //border: yellow solid 3px;
+  box-sizing: border-box;
 }
 
 body {
@@ -23,9 +28,9 @@ header {
   height: 8%;
 
   span {
-    display:block;
-    font-size: 100%;
-    text-align: center;
+    display: block;
+    text-align: left;
+    margin: auto 0;
   }
 }
 
@@ -39,7 +44,8 @@ header {
   @include tablet {
     width: 25%;
     float:left;
-
+    position: absolute;
+    top: 27%;
   }
 
 }
@@ -73,8 +79,29 @@ img {
     width: 60%;
   }
   @include desktop {
-      width: 50%;
+      width: 40%;
+  }
+}
+.at-least-tablet {
+  display: none;
+  @include tablet {
+    display: block;
   }
 }
 
+.hide-tablet {
+  @include tablet {
+    display: none;
+  }
+}
 
+ul.toolbar {
+  padding: 0;
+  text-align: center;
+  li {
+    margin-bottom: 5px;
+    list-style-type: none;
+
+  }
+
+}
