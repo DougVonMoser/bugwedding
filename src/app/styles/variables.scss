@@ -1,0 +1,34 @@
+$break1: 			504px;
+$break2: 			1024px;
+$break3: 			1170px;
+
+@mixin tablet {
+  @media all and (min-width: #{$break1}) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media all and (min-width: #{$break2}) {
+    @content;
+  }
+}
+
+* {
+  padding:0;
+  margin:0;
+  //border: yellow solid 3px;
+  box-sizing: border-box;
+}
+
+.at-least-tablet {
+  display: none;
+  @include tablet {
+    display: block;
+  }
+}
+
+.hide-tablet {
+  @include tablet {
+    display: none;
+  }
+}

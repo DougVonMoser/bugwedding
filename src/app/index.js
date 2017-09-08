@@ -1,2 +1,2 @@
-import './app.scss';
-import './save_the_date.jpg';
+import './styles/main.scss';
+import './assets/save_the_date.jpg';
