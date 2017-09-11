@@ -13,6 +13,11 @@ header {
     text-align: left;
     margin: auto 0;
   }
+  button.toolbar-toggle {
+    position: absolute;
+    top: 0;
+    right: 10px;
+  }
 }
 
 .tool-wrapper {
@@ -41,7 +46,7 @@ header {
     position: fixed;
     font-size: 45px;
     top: 0px;
-    left: 10px;
+    right: 10px;
   }
 
   @include tablet {
@@ -57,6 +62,7 @@ header {
   }
 
 }
+
 .right-thing {
   //background-color: blue;
   @include tablet {

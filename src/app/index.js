@@ -18,5 +18,4 @@ document.addEventListener("DOMContentLoaded", function(event) {
     // end mobile toolbar toggle
 
 
-
 });
