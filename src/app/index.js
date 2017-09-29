@@ -1,5 +1,6 @@
 import './styles/main.scss';
 import './assets/save_the_date.jpg';
+import Rx from 'rxjs';
 
 document.addEventListener("DOMContentLoaded", function(event) {
 
@@ -7,15 +8,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
     let button = document.querySelector('.toolbar-toggle');
     let ex = document.querySelector('.ex');
     let showenElement = document.querySelector('.tool-wrapper');
+    Rx.Observable.fromEvent(ex, 'click')
+        .subscribe(event => {
+            showenElement.style.display = 'none';
+        });
 
-    ex.addEventListener('click', function(e){
-        showenElement.style.display = 'none';
-    });
-
-    button.addEventListener('click', function(e){
-        showenElement.style.display = 'block';
-    });
+    Rx.Observable.fromEvent(button, 'click')
+        .subscribe(event => {
+            showenElement.style.display = 'block';
+        });
     // end mobile toolbar toggle
-
 
 });
