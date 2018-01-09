@@ -24,8 +24,7 @@
   "dependencies": {
     "express": "^4.15.4",
     "glue": "^4.2.0",
-    "path": "^0.12.7",
-    "rxjs": "^5.4.3"
+    "path": "^0.12.7"
   },
   "devDependencies": {
     "css-loader": "^0.28.7",

@@ -1,6 +1,9 @@
 import './styles/main.scss';
 import './assets/save_the_date.jpg';
-import Rx from 'rxjs';
+import './assets/dancing.jpg';
+import './assets/hands.jpg';
+import './assets/musical_notes.jpg';
+import './assets/sitting_bench.jpg';
 
 document.addEventListener("DOMContentLoaded", function(event) {
 
