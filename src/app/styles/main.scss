@@ -17,7 +17,10 @@
   /* Needed for children to be absolutely positioned relative to the parent. */
   position: relative;
   /* The height of the container. Must be set, but it doesn't really matter what the value is. */
-  height: 92vh;
+  min-height: 92vh;
+
+}
+.middle-text {
 
   /* For text formatting. */
   display: flex;
@@ -27,6 +30,15 @@
   text-shadow: 0 0 5px #000;
 }
 
+.bio {
+  max-width: 85%;
+  @include tablet {
+    max-width: 50%;
+  }
+  &:nth-child(2) {
+    margin-top: 15px;
+  }
+}
 
 
 .parallax::after {
@@ -51,15 +63,37 @@
 /* The styling for the static div. */
 .static {
   background: gray;
+  display: flex;
+  padding-top: 45px;
+  flex-direction: column;
+  @include tablet {
+    flex-direction: row;
+  }
+  .bio {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    span {
+      font-size: 16px;
+    }
+    .face {
+      margin: 0 auto 35px auto;
+      img {
+        border-radius: 15%;
+      }
+    }
+  }
 }
 
+
 .bg1::after {
-  background: url("/static/8edd33a04a2b4a28fb509abae93f5a03.jpg") no-repeat center top;
+  background: url("/static/sitting_bench.jpg") no-repeat center top;
   background-size: cover;
 }
 
 .bg2::after {
-  background: url("/static/970fc30ed7bcee5895f2d1c086a5b59c.jpg") no-repeat center top;
+  background: url("/static/musical_notes.jpg") no-repeat center top;
   background-size: cover;
 }
 
@@ -68,6 +102,7 @@
 }
 
 .toolbar {
+  color: rgb(85, 26, 139);
   display: flex;
   justify-content: space-between;
   overflow: hidden;
@@ -81,16 +116,41 @@
     padding: 2vh 0;
     display: block;
     text-decoration: none;
+
   }
   div.right {
     display: flex;
 
     a {
+      display: none;
+      color: rgb(85, 26, 139);
       font-size: 3vh;
-
       padding: 2.5vh;
       text-decoration: none;
-      color: red;
+      @include desktop {
+        display: initial;
+      }
+
     }
   }
+}
+
+a.hotel {
+  appearance: none;
+  transition: background-color .5s ease;
+  cursor: pointer;
+  display: inline-block;
+  padding: 1.1rem 3.5rem;
+  font-size: 1.6rem;
+  border-radius: 2px;
+  font-weight: 600;
+  outline: none;
+  text-align: center;
+  box-shadow: none;
+  width: 100%;
+  margin: 0 auto;
+  background-color: rgb(85, 26, 139);
+  color: #fff;
+  border: none;
+  border-radius: 35px;
 }
