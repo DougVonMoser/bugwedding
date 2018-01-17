@@ -4,6 +4,8 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
+let PORT = process.env.NODE_ENV === 'production' ? 80 : 8081;
+
 app.use('/static', express.static(path.join(__dirname, './dist/')));
 
 app.get('/', function(req, res){
@@ -22,6 +24,6 @@ app.get('/registry', function(req, res){
     res.sendFile(path.join(__dirname, './layouts/registry.html'));
 });
 
-app.listen(8081, function(){
-    console.log(`listening on port 8081`)
+app.listen(PORT, function(){
+    console.log(`listening on port ${PORT}`)
 });
