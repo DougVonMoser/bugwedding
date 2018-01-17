@@ -1,6 +1,7 @@
-$break1: 			504px;
-$break2: 			1024px;
-$break3: 			1170px;
+$break1: 504px;
+$break2: 1024px;
+$break3: 1170px;
+$purp: rgb(85, 26, 139);
 
 @mixin tablet {
   @media all and (min-width: #{$break1}) {

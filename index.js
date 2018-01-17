@@ -10,6 +10,18 @@ app.get('/', function(req, res){
     res.sendFile(path.join(__dirname, './layouts/default.html'));
 });
 
+app.get('/accommodations', function(req, res){
+    res.sendFile(path.join(__dirname, './layouts/accommodations.html'));
+});
+
+app.get('/details', function(req, res){
+    res.sendFile(path.join(__dirname, './layouts/details.html'));
+});
+
+app.get('/registry', function(req, res){
+    res.sendFile(path.join(__dirname, './layouts/registry.html'));
+});
+
 app.listen(8081, function(){
     console.log(`listening on port 8081`)
 });

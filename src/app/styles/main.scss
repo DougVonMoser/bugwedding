@@ -1,4 +1,5 @@
 @import './variables.scss';
+@import './overlay.scss';
 
 .wrapper {
   margin-top: 8vh;
@@ -63,17 +64,19 @@
 /* The styling for the static div. */
 .static {
   background: gray;
-  display: flex;
-  padding-top: 45px;
-  flex-direction: column;
+  padding-top: 25px;
+  padding-bottom: 25px;
   @include tablet {
-    flex-direction: row;
+
   }
   .bio {
     padding: 10px;
     display: flex;
-    flex-direction: column;
     margin: 0 auto;
+    flex-direction: column;
+    @include tablet {
+      flex-direction: row;
+    }
     span {
       font-size: 16px;
     }
@@ -101,6 +104,32 @@
   font-size: 12vh;
 }
 
+.our-story {
+  text-align: center;
+  font-size: 6vh;
+  padding-bottom: 15px;
+}
+
+.in-words {
+  text-align: center;
+  font-size: 4vh;
+}
+.hiding {
+  display: none;
+}
+
+div.overlay {
+  background-color: white;
+  height: 100vh;
+  width: 100vw;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 .toolbar {
   color: rgb(85, 26, 139);
   display: flex;
@@ -116,7 +145,17 @@
     padding: 2vh 0;
     display: block;
     text-decoration: none;
-
+  }
+  svg.menu {
+    position: absolute;
+    top: 2vh;
+    right: 1vh;
+    height: 4vh;
+    fill: rgb(85, 26, 139);
+    width: 10%;
+    @include desktop {
+      display: none;
+    }
   }
   div.right {
     display: flex;
@@ -124,8 +163,8 @@
     a {
       display: none;
       color: rgb(85, 26, 139);
-      font-size: 3vh;
-      padding: 2.5vh;
+      font-size: 2vh;
+      padding: 3vh 2vw;
       text-decoration: none;
       @include desktop {
         display: initial;
@@ -134,6 +173,9 @@
     }
   }
 }
+
+
+
 
 a.hotel {
   appearance: none;
