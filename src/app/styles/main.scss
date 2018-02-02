@@ -1,5 +1,6 @@
 @import './variables.scss';
 @import './overlay.scss';
+@import './details.scss';
 
 .wrapper {
   margin-top: 8vh;
@@ -19,8 +20,15 @@
   position: relative;
   /* The height of the container. Must be set, but it doesn't really matter what the value is. */
   min-height: 92vh;
-
 }
+
+.slit {
+  /* Needed for children to be absolutely positioned relative to the parent. */
+  position: relative;
+  /* The height of the container. Must be set, but it doesn't really matter what the value is. */
+  height: 70vh;
+}
+
 .middle-text {
 
   /* For text formatting. */
@@ -100,6 +108,12 @@
   background-size: cover;
 }
 
+.bg3::after {
+  background: url("/static/hands.jpg") no-repeat center top;
+  background-size: cover;
+}
+
+
 .title {
   font-size: 12vh;
 }
@@ -178,19 +192,14 @@ div.overlay {
 
 
 a.hotel {
-  appearance: none;
   transition: background-color .5s ease;
   cursor: pointer;
   display: inline-block;
   padding: 1.1rem 3.5rem;
-  font-size: 1.6rem;
-  border-radius: 2px;
   font-weight: 600;
   outline: none;
   text-align: center;
   box-shadow: none;
-  width: 100%;
-  margin: 0 auto;
   background-color: rgb(85, 26, 139);
   color: #fff;
   border: none;

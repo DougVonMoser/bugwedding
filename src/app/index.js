@@ -7,6 +7,15 @@ import './assets/sitting_bench.jpg';
 import './assets/face_placeholder.jpg';
 import './assets/menu.svg';
 import './assets/cancel.svg';
+import './assets/wedding.svg';
+import initializeMap from './initMap';
+
+window.initMap = function() {
+    let mapEl = document.getElementById('map');
+    if(mapEl){
+        // initializeMap(mapEl);
+    }
+};
 
 document.addEventListener("DOMContentLoaded", function(event) {
 
@@ -24,3 +33,5 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
 
 });
+
+
