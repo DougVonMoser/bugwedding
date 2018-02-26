@@ -25,5 +25,5 @@ app.get('/registry', function(req, res){
 });
 
 app.listen(PORT, function(){
-    console.log(`listening on port ${PORT}`)
+    console.log(`listening on  http://localhost:${PORT}`)
 });

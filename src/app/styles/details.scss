@@ -1,18 +1,29 @@
+* {
+  font-family: 'Crimson Text', serif;
+}
+
 #map {
   width: 100vw;
-  height: 70vh;
+  height: 100%;
   background-color: blue;
   @include desktop {
     width: 100%;
   }
 }
 .something {
+  background: url("/static/laughing.jpg") center top;
+  background-size: cover;
   width: 100vw;
-  height: 70vh;
-  background-color: blue;
+  height: 100%;
+  background-color: orange;
   @include desktop {
     width: 100%;
   }
+}
+
+.side-image {
+  height: auto;
+  width: 100%
 }
 .info {
   width: 100%;
@@ -23,7 +34,7 @@
   flex-direction: column;
   justify-content: center;
 }
-.blurb {
+.copy {
   padding: 0 50px;
 }
 .address {

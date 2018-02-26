@@ -8,12 +8,17 @@ import './assets/face_placeholder.jpg';
 import './assets/menu.svg';
 import './assets/cancel.svg';
 import './assets/wedding.svg';
+import './assets/laughing.jpg';
+import './assets/doug.jpg';
+import './assets/britt.jpg';
+import './assets/tucson_couch.jpg';
+import './assets/dogs.png';
 import initializeMap from './initMap';
 
 window.initMap = function() {
     let mapEl = document.getElementById('map');
     if(mapEl){
-        // initializeMap(mapEl);
+        initializeMap(mapEl);
     }
 };
 
