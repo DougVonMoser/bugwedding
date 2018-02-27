@@ -65,6 +65,13 @@
     flex-direction: row-reverse;
   }
 }
+.container-two__reverse {
+  display: flex;
+  flex-direction: column-reverse;
+  @include desktop {
+    flex-direction: row-reverse;
+  }
+}
 
 h1 {
   text-align: center;
