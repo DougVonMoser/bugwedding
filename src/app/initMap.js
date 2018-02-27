@@ -96,9 +96,7 @@ module.exports = function (mapEl) {
 
     google.maps.event.addListener(map, 'zoom_changed', function() {
         var zoom = map.getZoom();
-        // iterate over markers and call setVisible
-        // marker.setVisible(zoom <= 15);
-        springhill.setVisible(zoom <= 14)
+        springhill.setVisible(zoom >= 15)
     });
 
 };

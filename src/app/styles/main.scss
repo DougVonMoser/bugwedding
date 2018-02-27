@@ -50,6 +50,12 @@
   min-height: 23vh !important;
 }
 
+.lower {
+  font-size: 4vh;
+  @include desktop {
+    font-size: 6vh;
+  }
+}
 
 .parallax::after {
   /* Display and position the pseudo-element */
@@ -68,6 +74,10 @@
   background-size: 100%;
   /* Keep the image from overlapping sibling elements. */
   z-index: -1;
+}
+
+.geebeez::after {
+  transform: none !important;
 }
 
 /* The styling for the static div. */
@@ -133,6 +143,9 @@
 
 .title {
   font-size: 12vh;
+  @include desktop {
+    letter-spacing: 25px;
+  }
 }
 
 .our-story {
@@ -219,6 +232,8 @@ div.overlay {
 
 
 a.hotel {
+  max-width: 550px;
+  text-decoration: none;
   transition: background-color .5s ease;
   cursor: pointer;
   display: inline-block;
