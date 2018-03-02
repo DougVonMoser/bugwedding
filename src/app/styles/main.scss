@@ -27,7 +27,9 @@
   position: relative;
   min-height: 92vh;
 }
-
+.section-container {
+  padding: 25px 0;
+}
 
 .middle-text {
 
@@ -83,8 +85,6 @@
 /* The styling for the static div. */
 .static {
   background: gray;
-  padding-top: 25px;
-  padding-bottom: 25px;
   position: relative;
   min-height: 46vh;
   @include tablet {
@@ -247,4 +247,35 @@ a.hotel {
   color: #fff;
   border: none;
   border-radius: 35px;
+}
+
+.logos {
+  &-logo{
+    min-width:262px;
+    margin: 5px;
+    text-decoration: none;
+    transition: background-color .5s ease;
+    cursor: pointer;
+    display: inline-block;
+    padding: 1.1rem 3.5rem;
+    font-weight: 600;
+    outline: none;
+    text-align: center;
+    box-shadow: none;
+    color: #fff;
+    border: solid black 2px;
+    border-radius: 35px;
+    &-pic {
+      max-width: 100%;
+      max-height: 10vh;
+    }
+  }
+}
+
+.small-title {
+  margin-bottom: 10px;
+}
+
+.strike {
+  text-decoration: line-through;
 }

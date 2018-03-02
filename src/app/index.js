@@ -10,7 +10,10 @@ import './assets/laughing.jpg';
 import './assets/doug.jpg';
 import './assets/britt.jpg';
 import './assets/tucson_couch.jpg';
+import './assets/river.jpg';
 import './assets/dogs.png';
+import './assets/bbb.png';
+import './assets/pb.png';
 import initializeMap from './initMap';
 
 window.initMap = function() {
