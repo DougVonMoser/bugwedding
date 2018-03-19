@@ -2,7 +2,6 @@ import './styles/main.scss';
 import './assets/hands.jpg';
 import './assets/musical_notes.jpg';
 import './assets/sitting_bench.jpg';
-import './assets/face_placeholder.jpg';
 import './assets/menu.svg';
 import './assets/cancel.svg';
 import './assets/wedding.svg';
